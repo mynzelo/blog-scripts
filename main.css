@@ -1,0 +1,81 @@
+/* 1. 自定义字体 */
+main {
+    font-family: "Noto Sans", "Noto Sans SC", "Noto Color Emoji", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-optical-sizing: auto;
+}
+
+/* 1.1 博文和评论字体，因为中文相比英文字号更大，这里调小一点 */
+.entry-content, .wp-block-comments {
+    font-size: var(--wp--preset--font-size--small);
+}
+
+/* 2. 超链接样式 */
+.entry-content a {
+    text-decoration: underline;
+}
+
+main a:hover {
+    background-color: rgba(128, 128, 128, 0.3);
+}
+
+/* 3. 代码块样式 */
+.wp-block-code {
+    padding: 0;
+}
+
+.wp-block-code code {
+    overflow-x: auto;
+    overflow-wrap: normal;
+    white-space: pre;
+    font-size: var(--wp--preset--font-size--small);
+}
+
+/* 4. 页面格式，保证footer在最下面 */
+header {
+    height: 10vh;
+}
+
+main {
+    min-height: 90vh;
+}
+
+/* 5. 碎碎念 图片样式 */
+.small-img .wp-block-post-featured-image {
+    max-height: 30vh;
+    max-width: 20vw;
+    overflow: hidden;
+}
+
+.small-img .wp-block-post-featured-image img {
+    max-height: 30vh;
+    max-width: 20vw;
+    object-fit: contain !important;
+}
+
+.small-img figure {
+    max-height: 50vh;
+    max-width: 30vw;
+    overflow: hidden;
+}
+
+.small-img figure img {
+    max-height: 50vh;
+    max-width: 30vw;
+    object-fit: contain !important;
+}
+
+/* 6. h1 h2 h3 h4 大小 */
+.entry-content h1 {
+    font-size: var(--wp--preset--font-size--large);
+}
+.entry-content h2 {
+    font-size: var(--wp--preset--font-size--medium);
+}
+.entry-content h3 {
+    font-size: calc(var(--wp--preset--font-size--medium) * 0.9);
+}
+.entry-content h4 {
+    font-size: var(--wp--preset--font-size--small);
+}
