@@ -1,13 +1,15 @@
+:root {
+    --wpcode--preset--font-size--s-small: 0.8rem;
+    --wpcode--preset--font-family--body: "Noto Sans", "Noto Sans SC", "Noto Color Emoji","Noto Emoji", system-ui;
+    --wpcode--preset--font-family--code: "Noto Sans Mono", "Noto Sans", "Noto Sans SC", "Noto Color Emoji","Noto Emoji", system-ui;
+}
+
 /* 1. 自定义字体 */
-main {
-    font-family: "Noto Sans", "Noto Sans SC", "Noto Color Emoji", system-ui;
+body {
+    font-family: var(--wpcode--preset--font-family--body);
     font-weight: 400;
     font-style: normal;
     font-optical-sizing: auto;
-}
-
-/* 1.1 博文和评论字体，因为中文相比英文字号更大，这里调小一点 */
-.entry-content, .wp-block-comments {
     font-size: var(--wp--preset--font-size--small);
 }
 
@@ -29,7 +31,8 @@ main a:hover {
     overflow-x: auto;
     overflow-wrap: normal;
     white-space: pre;
-    font-size: var(--wp--preset--font-size--small);
+    font-size: var(--wpcode--preset--font-size--s-small);
+    font-family: var(--wpcode--preset--font-family--code);
 }
 
 /* 4. 页面格式，保证footer在最下面 */
