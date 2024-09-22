@@ -14,11 +14,11 @@ body {
 }
 
 /* 2. 超链接样式 */
-.entry-content a {
+a {
     text-decoration: underline;
 }
 
-main a:hover {
+a:hover{
     background-color: rgba(128, 128, 128, 0.3);
 }
 
