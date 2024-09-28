@@ -1,7 +1,7 @@
 :root {
     --wpcode--preset--font-size--s-small: 0.8rem;
-    --wpcode--preset--font-family--body: "Noto Sans", "Noto Sans SC", "Noto Color Emoji","Noto Emoji", system-ui;
-    --wpcode--preset--font-family--code: "Noto Sans Mono", "Noto Sans", "Noto Sans SC", "Noto Color Emoji","Noto Emoji", system-ui;
+    --wpcode--preset--font-family--body: "Noto Sans", "Noto Sans SC", "Noto Color Emoji", "Noto Emoji", system-ui;
+    --wpcode--preset--font-family--code: "Noto Sans Mono", "Noto Sans", "Noto Sans SC", "Noto Color Emoji", "Noto Emoji", system-ui;
 }
 
 /* 1. 自定义字体 */
@@ -18,8 +18,8 @@ a {
     text-decoration: underline;
 }
 
-a:hover{
-    background-color: rgba(128, 128, 128, 0.3);
+a:hover {
+    background-color: LightGrey;
 }
 
 /* 3. 代码块样式 */
@@ -35,7 +35,7 @@ a:hover{
     font-family: var(--wpcode--preset--font-family--code);
 }
 
-/* 4. 页面格式，保证footer在最下面 */
+/* 4. 页面高度，保证footer在最下面 */
 header {
     height: 10vh;
 }
@@ -69,16 +69,32 @@ main {
     object-fit: contain !important;
 }
 
-/* 6. h1 h2 h3 h4 大小 */
-.entry-content h1 {
-    font-size: var(--wp--preset--font-size--large);
+/* 6. h1 h2 h3 h4 h5 大小 */
+.readable-header h2,
+.readable-header h3,
+.readable-header h4,
+.readable-header h5 {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: LightGrey;
 }
-.entry-content h2 {
-    font-size: var(--wp--preset--font-size--medium);
+
+.readable-header h1 {
+    /* h1样式不会在正文中用到 */
 }
-.entry-content h3 {
-    font-size: calc(var(--wp--preset--font-size--medium) * 0.9);
+
+.readable-header h2 {
+    font-size: calc(var(--wp--preset--font-size--medium) * 1.25);
 }
-.entry-content h4 {
-    font-size: var(--wp--preset--font-size--small);
+
+.readable-header h3 {
+    font-size: calc(var(--wp--preset--font-size--medium) * 1.1);
+}
+
+.readable-header h4 {
+    font-size: calc(var(--wp--preset--font-size--medium) * 0.95);
+}
+
+.readable-header h5 {
+    font-size: calc(var(--wp--preset--font-size--medium) * 0.8);
 }

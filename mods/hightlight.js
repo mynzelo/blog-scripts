@@ -2,5 +2,6 @@
 export const hightlight = {
     run: () => {
         hljs.highlightAll();
-    }
+    },
+    skipFirstPage: true
 }

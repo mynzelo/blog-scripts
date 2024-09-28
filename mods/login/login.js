@@ -1,4 +1,4 @@
-// 登录
+// 输入api key
 export const login = {
     run: () => {
         const button = document.querySelector(`.blog-scripts-login input[type="submit"]`);
@@ -13,5 +13,6 @@ export const login = {
                 }
             })
         }
-    }
+    },
+    skipFirstPage: false
 }
