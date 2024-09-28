@@ -39,6 +39,7 @@ const getTodayPost = () => {
   
 // 访问随机一篇博文
 export const randomPost = {
+  name: "randomPost",
   run: () => {
     const linkDOM = document.querySelector(".random-post a");
     if (linkDOM) {
