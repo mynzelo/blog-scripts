@@ -11,5 +11,11 @@ export const utils = {
             method: innerMethod,
             headers: innerHeaders
         });
+    },
+    removePrefix: (str, prefix) => {
+        if (str.startsWith(prefix)) {
+            return str.slice(prefix.length);
+        }
+        return str;
     }
 }

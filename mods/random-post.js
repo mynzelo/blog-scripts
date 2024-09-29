@@ -32,8 +32,8 @@ const getTodayPost = () => {
     .then((res) => {
       return res.json();
     })
-    .then((json) => {
-      return json[0];
+    .then((posts) => {
+      return posts[0];
     });
 };
   

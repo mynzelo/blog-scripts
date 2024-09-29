@@ -13,6 +13,10 @@ body {
     font-size: var(--wp--preset--font-size--small);
 }
 
+.grey-color {
+    color: rgb(99, 99, 99)
+}
+
 /* 2. 超链接样式 */
 a {
     text-decoration: underline;
@@ -101,5 +105,5 @@ main {
 
 /* 7. hide main during processing javascript */
 main {
-    visibility: hidden;  
+    visibility: hidden;
 }

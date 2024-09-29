@@ -3,8 +3,9 @@ import { chineseDisplay } from './mods/chinese-display.js';
 import { randomPost } from './mods/random-post.js';
 import { login } from './mods/login/login.js';
 import { addCssClass } from './mods/add-css-class.js';
+import { addMetadata } from './mods/add-metadata.js';
 
-const mods = [hightlight, chineseDisplay, randomPost, login, addCssClass];
+const mods = [hightlight, chineseDisplay, randomPost, login, addCssClass, addMetadata];
 
 const showMainContent = () => {
     document.querySelector('main').style.visibility = 'visible'
