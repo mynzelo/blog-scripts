@@ -24,7 +24,8 @@ const addMetadataToBlock = (block, metadata) => {
  */
 export const addMetadata = {
     run: () => {
-        document.querySelectorAll(".trick-row").values()
+        Array
+            .from(document.querySelectorAll(".trick-row"))
             .map(block => {
                 return {
                     block: block,
