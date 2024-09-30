@@ -17,5 +17,9 @@ export const utils = {
             return str.slice(prefix.length);
         }
         return str;
+    },
+    isNumeric: (str) => {
+        const numberPattern = /^-?\d+(\.\d+)?$/; // 匹配整数和小数，包括负号  
+        return numberPattern.test(str);
     }
 }

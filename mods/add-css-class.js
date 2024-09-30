@@ -17,7 +17,7 @@ export const addCssClass = {
         document.querySelector(".entry-content")
 
         // 优化header样式
-        innerRun(true, ".entry-content", 'readable-header');
+        innerRun(url.pathname !== '/life' && url.pathname !== '/repost', ".entry-content", 'readable-header');
     },
     skipFirstPage: true
 }

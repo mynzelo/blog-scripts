@@ -4,8 +4,9 @@ import { randomPost } from './mods/random-post.js';
 import { login } from './mods/login/login.js';
 import { addCssClass } from './mods/add-css-class.js';
 import { addMetadata } from './mods/add-metadata.js';
+import { autoFootNote } from './mods/auto-footnote.js';
 
-const mods = [hightlight, chineseDisplay, randomPost, login, addCssClass, addMetadata];
+const mods = [hightlight, chineseDisplay, randomPost, login, addCssClass, addMetadata, autoFootNote];
 
 const showMainContent = () => {
     document.querySelector('main').style.visibility = 'visible'
@@ -26,6 +27,7 @@ window.addEventListener('DOMContentLoaded', function () {
             mod.run(); 
         } catch (error) {
             console.error(`mod运行异常，name: ${mod.name}, error: ${error}`)
+            // alert(`mod运行异常，name: ${mod.name}, error: ${error}`)
         }
     })
 
