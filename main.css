@@ -1,10 +1,11 @@
+/* 1. 变量 */
 :root {
     --wpcode--preset--font-size--s-small: 0.8rem;
     --wpcode--preset--font-family--body: "Noto Sans", "Noto Sans SC", "Noto Color Emoji", "Noto Emoji", system-ui;
     --wpcode--preset--font-family--code: "Noto Sans Mono", "Noto Sans", "Noto Sans SC", "Noto Color Emoji", "Noto Emoji", system-ui;
 }
 
-/* 1. 自定义字体 */
+/* 2. 字体 */
 body {
     font-family: var(--wpcode--preset--font-family--body);
     font-weight: 400;
@@ -13,20 +14,16 @@ body {
     font-size: var(--wp--preset--font-size--small);
 }
 
-.grey-color {
-    color: rgb(99, 99, 99)
-}
-
-/* 2. 超链接样式 */
+/* 3. 超链接 */
 a {
     text-decoration: underline;
 }
 
 a:hover {
-    background-color: LightGrey;
+    background-color: lightgrey;
 }
 
-/* 3. 代码块样式 */
+/* 4. 代码块 */
 .wp-block-code {
     padding: 0;
 }
@@ -39,7 +36,7 @@ a:hover {
     font-family: var(--wpcode--preset--font-family--code);
 }
 
-/* 4. 页面高度，保证footer在最下面 */
+/* 5. 页面高度，保证footer在最下面 */
 header {
     height: 10vh;
 }
@@ -48,7 +45,7 @@ main {
     min-height: 90vh;
 }
 
-/* 5. 碎碎念 图片样式 */
+/* 6. 碎碎念 图片样式 */
 .small-img .wp-block-post-featured-image {
     max-height: 30vh;
     max-width: 20vw;
@@ -73,14 +70,14 @@ main {
     object-fit: contain !important;
 }
 
-/* 6. h1 h2 h3 h4 h5 大小 */
+/* 7. h1 h2 h3 h4 h5 大小 */
 .readable-header h2,
 .readable-header h3,
 .readable-header h4,
 .readable-header h5 {
     border-bottom-style: solid;
     border-bottom-width: 1px;
-    border-bottom-color: LightGrey;
+    border-bottom-color: lightgrey;
 }
 
 .readable-header h1 {
@@ -103,7 +100,17 @@ main {
     font-size: calc(var(--wp--preset--font-size--medium) * 0.8);
 }
 
-/* 7. hide main during processing javascript */
+/* 8. hide main during processing javascript */
 main {
     visibility: hidden;
+}
+
+/* 9. 分割线 颜色 */
+.wp-block-separator {
+    color: lightgrey !important;
+}
+
+/* 10. 工具样式 */
+.grey-color {
+    color: var(--wp--preset--color--contrast-2);
 }

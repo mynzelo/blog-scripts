@@ -19,7 +19,7 @@ const today = () => {
 };
   
 const getTodayPost = () => {
-  return utils.fetch("/wp-json/wp/v2/posts?per_page=1", null, null)
+  return utils.fetch("/wp-json/wp/v2/posts?per_page=1&categories=1", null, null)
     .then((res) => {
       const totalPosts = res.headers.get("x-wp-totalpages");
       console.log(`totalPosts:${totalPosts}`)
@@ -27,7 +27,7 @@ const getTodayPost = () => {
       return todayPost;
     })
     .then((targetPost) => {
-      return fetch(`/wp-json/wp/v2/posts?per_page=1&offset=${targetPost}`);
+      return fetch(`/wp-json/wp/v2/posts?per_page=1&categories=1&offset=${targetPost}`);
     })
     .then((res) => {
       return res.json();
