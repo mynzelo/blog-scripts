@@ -25,8 +25,8 @@ window.addEventListener('DOMContentLoaded', function () {
         try {
             mod.run(); 
         } catch (error) {
-            console.error(`mod运行异常，name: ${mod.name}, error: ${error}`)
-            // alert(`mod运行异常，name: ${mod.name}, error: ${error}`)
+            console.error(`mod load failed, name: ${mod.name}, error: ${error}`)
+            // alert(`mod load failed, ame: ${mod.name}, error: ${error}`)
         }
     })
 
